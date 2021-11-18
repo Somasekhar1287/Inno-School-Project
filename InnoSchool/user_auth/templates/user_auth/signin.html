@@ -1,0 +1,42 @@
+{% extends "user_auth/layout.html" %}
+{% load static %}
+{% block body %}
+    <div class="logo">
+        <img src="{% static 'homepage/media/logo.png' %}" alt="logo" />
+    </div>
+    <div id="container">
+        <div id="header"><h1 id="site-name">LOGIN</h1></div>
+        <div class="main">
+            <div class="content">
+                <div id="content">
+                    {% if messages %}
+                        <div class="message">
+                            {% for message in messages %}
+                        
+                            <div class="alert alert-success">
+                                 {{ message }}
+                            </div>
+                
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                    <form action="{% url 'user_auth:signin' %}" method="post"  >
+                        {% csrf_token %}
+                        <div class="form-row">
+                            <label>User name</label>
+                            <input type="text" name="username" id="id_username" />
+                        </div>
+                        <div class="form-row">
+                            <label>Password</label>
+                            <input type="password" name="Password" id="id_password" />
+                        </div>
+                        <div class="submit-row">
+                            <input type="submit" value="Log in" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+{% endblock %}

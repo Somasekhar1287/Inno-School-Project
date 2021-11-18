@@ -1,0 +1,38 @@
+body{
+    width:100%;
+    height:auto;
+    background-color: #fff;
+}
+.logo{
+    width:20%;
+    height:auto;
+    margin:auto;
+}
+img{
+    width:200px;
+    height:50px;
+}
+.nav-container{
+    width:95%;
+    margin:auto;
+    height:auto;
+}
+ul{
+    list-style-type:none;
+    overflow: hidden;
+    background-color:#79aec8;
+}
+li{
+   display: inline; 
+   color:#fff;
+   padding: 10px;
+}
+
+a{
+    color:#fff;
+    margin:0;
+    padding:0;
+    text-align: center;
+    display:block;
+    text-decoration: none;
+}

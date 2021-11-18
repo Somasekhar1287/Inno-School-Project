@@ -1,0 +1,55 @@
+{% extends "admin/base.html" %}
+{% load static %}
+{% block branding %}
+<div class="nav-brand"> 
+    <div>
+        <h1>Dashboard</h1>
+    </div>
+    <div class="logo">
+        <img src="{% static 'homepage/media/logo.png' %}" alt="logo" />
+    </div>
+</div>
+
+{% if user.profile.is_online %}
+    Online
+{% else %}
+    Offline
+{% endif %}
+
+{% endblock %}
+{% block extrahead %}
+    <style>
+        .field-__str__ {
+            font-family: Consolas, monospace;
+        }
+      
+        #branding h1{
+            
+            
+        }
+        #branding{
+            width: 20%;
+            height: auto;
+        }
+        .nav-brand{
+            width:auto;
+            height:auto;
+            margin:auto;
+        }
+        .nav-brand div{
+            display:inline-block;
+        }
+        .logo{
+            width:20%;
+            height:auto;
+            margin:auto;
+        }
+        img{
+            width:200px;
+            height:50px;
+        }
+    </style>
+    <script>
+       
+    </script>
+{% endblock %}
